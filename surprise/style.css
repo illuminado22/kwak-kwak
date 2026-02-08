@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.valentine-card {
+    /* Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(255, 77, 109, 0.3);
+    
+    padding: 40px;
+    text-align: center;
+    width: 85%;
+    max-width: 450px;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+}
+
+#noBtn {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #d63384;
+    padding: 12px 35px;
+    border-radius: 50px;
+    
+  
+    position: fixed; 
+    z-index: 999; 
+    transition: none;
+}
+
+#celebrationPic {
+    display: none;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 15px 0;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    animation: fadeIn 1s;
+}
+
+/* Floating Hearts Styling */
+.heart {
+    position: absolute;
+    color: rgba(255, 77, 109, 0.7);
+    font-size: 20px;
+    pointer-events: none;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

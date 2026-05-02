@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 8th Monthsary 💕</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ 
+
+  <div class="stars" id="stars"></div>
+ 
+
+  <div class="header">
+    <div class="month-badge">✦ 8 Months Together ✦</div>
+    <div class="title-text">Happy <span>8th</span> Monthsary!</div>
+  </div>
+ 
+
+  <div class="tulip-stage">
+    <p class="hint-text" id="hint">click the flower to bloom🌷</p>
+ 
+    <svg id="tulip-svg" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="gradLeft" cx="60%" cy="80%" r="70%">
+          <stop offset="0%"   stop-color="#fce7f3"/>
+          <stop offset="50%"  stop-color="#f472b6"/>
+          <stop offset="100%" stop-color="#be185d"/>
+        </radialGradient>
+        <radialGradient id="gradRight" cx="40%" cy="80%" r="70%">
+          <stop offset="0%"   stop-color="#fce7f3"/>
+          <stop offset="50%"  stop-color="#f472b6"/>
+          <stop offset="100%" stop-color="#be185d"/>
+        </radialGradient>
+        <radialGradient id="gradCenter" cx="50%" cy="85%" r="65%">
+          <stop offset="0%"   stop-color="#fff0f8"/>
+          <stop offset="55%"  stop-color="#fda4c8"/>
+          <stop offset="100%" stop-color="#ec4899"/>
+        </radialGradient>
+        <linearGradient id="gradStem" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#16a34a"/>
+          <stop offset="100%" stop-color="#4ade80"/>
+        </linearGradient>
+        <radialGradient id="gradStamen" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#fef9c3"/>
+          <stop offset="100%" stop-color="#fde68a"/>
+        </radialGradient>
+        <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge>
+            <feMergeNode in="b"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+ 
+
+      <path d="M100 245 Q98 210 100 175"
+            stroke="url(#gradStem)" stroke-width="5"
+            stroke-linecap="round" fill="none"/>
+ 
+
+      <path d="M99 220 Q72 202 66 180 Q86 190 99 218Z"
+            fill="#22c55e" opacity="0.9"/>
+ 
+
+      <path d="M101 205 Q128 186 134 163 Q114 176 101 203Z"
+            fill="#16a34a" opacity="0.9"/>
+ 
+
+      <circle id="bloom-ring" cx="100" cy="118" r="50"
+              fill="#f9a8d4" opacity="0"/>
+ 
+
+      <g id="petal-left">
+        <path d="M100 160 Q68 132 62 92 Q76 76 90 94 Q97 124 100 160Z"
+              fill="url(#gradLeft)"/>
+      </g>
+ 
+
+      <g id="petal-right">
+        <path d="M100 160 Q132 132 138 92 Q124 76 110 94 Q103 124 100 160Z"
+              fill="url(#gradRight)"/>
+      </g>
+ 
+
+      <g id="petal-center">
+        <path d="M100 160 Q83 128 85 90 Q92 72 100 70 Q108 72 115 90 Q117 128 100 160Z"
+              fill="url(#gradCenter)"/>
+      </g>
+ 
+      <g id="stamen" opacity="0">
+        <line x1="100" y1="152" x2="100" y2="114"
+              stroke="#fde68a" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="100" y1="152" x2="91"  y2="111"
+              stroke="#fde68a" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="100" y1="152" x2="109" y2="111"
+              stroke="#fde68a" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="100" cy="112" r="3.5" fill="url(#gradStamen)" filter="url(#glow)"/>
+        <circle cx="91"  cy="109" r="2.8" fill="#fef08a"          filter="url(#glow)"/>
+        <circle cx="109" cy="109" r="2.8" fill="#fef08a"          filter="url(#glow)"/>
+      </g>
+    </svg>
+  </div>
+ 
+  <div class="message-wrap" id="msgWrap">
+    <div class="msg-card">
+      <p class="msg-text">
+        Happy <em>8th monthsary</em> mahal ko. 💕<br><br>
+        I always love you mahal at <em>hindi magbabago yun</em>.
+        Malapit na tayo mag <em>1 year</em> mahal ko.<br><br>
+        Sorry din po palagi kita na <em>rage bait</em>,
+        sorry lang po hindi mawawala yun.<br><br>
+        <em>Happy 8th monthsary uli mahal kong maganda.</em> 🌷✨
+      </p>
+      <div class="msg-footer">
+        <span class="heart-divider">♥</span>
+        <span class="msg-footer-text">Always &amp; forever, mahal na mahal kita 💕</span>
+        <span class="heart-divider">♥</span>
+      </div>
+    </div>
+  </div>
+ 
+  <button class="reset-btn" id="resetBtn">↺ Close the flower</button>
+ 
+  <script type="module" src="tulips.js"></script>
+</body>
+</html>
+ 
